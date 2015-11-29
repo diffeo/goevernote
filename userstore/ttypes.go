@@ -5,10 +5,10 @@ package userstore
 
 import (
 	"bytes"
-	"errors"
 	"fmt"
 	"git.apache.org/thrift.git/lib/go/thrift"
-	"types"
+	"github.com/rastech/goevernote/errors"
+	"github.com/rastech/goevernote/types"
 )
 
 // (needed to ensure safety because of naive import list construction.)

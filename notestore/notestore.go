@@ -5,12 +5,14 @@ package notestore
 
 import (
 	"bytes"
-	"errors"
 	"fmt"
+
 	"git.apache.org/thrift.git/lib/go/thrift"
-	"limits"
-	"types"
-	"userstore"
+
+	"github.com/rastech/goevernote/errors"
+	"github.com/rastech/goevernote/types"
+	"github.com/rastech/goevernote/userstore"
+	"github.com/rastech/goevernote/limits"
 )
 
 // (needed to ensure safety because of naive import list construction.)

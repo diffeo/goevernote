@@ -6,14 +6,16 @@ package main
 import (
 	"flag"
 	"fmt"
-	"git.apache.org/thrift.git/lib/go/thrift"
 	"math"
 	"net"
 	"net/url"
 	"os"
 	"strconv"
 	"strings"
-	"userstore"
+
+	"git.apache.org/thrift.git/lib/go/thrift"
+
+	"github.com/rastech/goevernote/userstore"
 )
 
 func Usage() {
@@ -138,14 +140,14 @@ func main() {
 			Usage()
 			return
 		}
-		argvalue1 := byte(tmp1)
+		argvalue1 := int16(tmp1)
 		value1 := argvalue1
 		tmp2, err29 := (strconv.Atoi(flag.Arg(3)))
 		if err29 != nil {
 			Usage()
 			return
 		}
-		argvalue2 := byte(tmp2)
+		argvalue2 := int16(tmp2)
 		value2 := argvalue2
 		fmt.Print(client.CheckVersion(value0, value1, value2))
 		fmt.Print("\n")

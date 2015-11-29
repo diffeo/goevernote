@@ -7,7 +7,8 @@ import (
 	"bytes"
 	"fmt"
 	"git.apache.org/thrift.git/lib/go/thrift"
-	"limits"
+
+	"github.com/rastech/goevernote/limits"
 )
 
 // (needed to ensure safety because of naive import list construction.)

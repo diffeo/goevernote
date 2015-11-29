@@ -6,14 +6,16 @@ package main
 import (
 	"flag"
 	"fmt"
-	"git.apache.org/thrift.git/lib/go/thrift"
 	"math"
 	"net"
 	"net/url"
-	"notestore"
 	"os"
 	"strconv"
 	"strings"
+
+	"git.apache.org/thrift.git/lib/go/thrift"
+
+	"github.com/rastech/goevernote/notestore"
 )
 
 func Usage() {

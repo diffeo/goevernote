@@ -30303,7 +30303,7 @@ func (p *NoteStoreExpungeNotesArgs) Read(iprot thrift.TProtocol) error {
 				return err
 			}
 		case 2:
-			if err := p.readField2(iprot); err != nil {
+			if err := p.ReadField2(iprot); err != nil {
 				return err
 			}
 		default:
@@ -30330,7 +30330,8 @@ func (p *NoteStoreExpungeNotesArgs) readField1(iprot thrift.TProtocol) error {
 	return nil
 }
 
-func (p *NoteStoreExpungeNotesArgs) readField2(iprot thrift.TProtocol) error {
+// ReadField2 is public so that it can be used by the `note_store-remote` package
+func (p *NoteStoreExpungeNotesArgs) ReadField2(iprot thrift.TProtocol) error {
 	_, size, err := iprot.ReadListBegin()
 	if err != nil {
 		return thrift.PrependError("error reading list begin: ", err)
@@ -38155,7 +38156,7 @@ func (p *NoteStoreSendMessageToSharedNotebookMembersArgs) Read(iprot thrift.TPro
 				return err
 			}
 		case 4:
-			if err := p.readField4(iprot); err != nil {
+			if err := p.ReadField4(iprot); err != nil {
 				return err
 			}
 		default:
@@ -38201,7 +38202,8 @@ func (p *NoteStoreSendMessageToSharedNotebookMembersArgs) readField3(iprot thrif
 	return nil
 }
 
-func (p *NoteStoreSendMessageToSharedNotebookMembersArgs) readField4(iprot thrift.TProtocol) error {
+// ReadField4 is public so that it can be used by the `note_store-remote` package
+func (p *NoteStoreSendMessageToSharedNotebookMembersArgs) ReadField4(iprot thrift.TProtocol) error {
 	_, size, err := iprot.ReadListBegin()
 	if err != nil {
 		return thrift.PrependError("error reading list begin: ", err)
@@ -38934,7 +38936,7 @@ func (p *NoteStoreExpungeSharedNotebooksArgs) Read(iprot thrift.TProtocol) error
 				return err
 			}
 		case 2:
-			if err := p.readField2(iprot); err != nil {
+			if err := p.ReadField2(iprot); err != nil {
 				return err
 			}
 		default:
@@ -38961,7 +38963,8 @@ func (p *NoteStoreExpungeSharedNotebooksArgs) readField1(iprot thrift.TProtocol)
 	return nil
 }
 
-func (p *NoteStoreExpungeSharedNotebooksArgs) readField2(iprot thrift.TProtocol) error {
+// ReadField2 is public so that it can be used by the `note_store-remote` package
+func (p *NoteStoreExpungeSharedNotebooksArgs) ReadField2(iprot thrift.TProtocol) error {
 	_, size, err := iprot.ReadListBegin()
 	if err != nil {
 		return thrift.PrependError("error reading list begin: ", err)

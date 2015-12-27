@@ -16,6 +16,7 @@ import (
 	"git.apache.org/thrift.git/lib/go/thrift"
 
 	"github.com/rastech/goevernote/notestore"
+	"github.com/rastech/goevernote/types"
 )
 
 func Usage() {
@@ -312,7 +313,7 @@ func main() {
 		}
 		factory217 := thrift.NewTSimpleJSONProtocolFactory()
 		jsProt218 := factory217.GetProtocol(mbTrans215)
-		argvalue1 := notestore.NewLinkedNotebook()
+		argvalue1 := types.NewLinkedNotebook()
 		err219 := argvalue1.Read(jsProt218)
 		if err219 != nil {
 			Usage()
@@ -339,7 +340,7 @@ func main() {
 		}
 		factory224 := thrift.NewTSimpleJSONProtocolFactory()
 		jsProt225 := factory224.GetProtocol(mbTrans222)
-		argvalue1 := notestore.NewLinkedNotebook()
+		argvalue1 := types.NewLinkedNotebook()
 		err226 := argvalue1.Read(jsProt225)
 		if err226 != nil {
 			Usage()
@@ -383,7 +384,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.GetNotebook(value0, value1))
 		fmt.Print("\n")
 		break
@@ -414,7 +415,7 @@ func main() {
 		}
 		factory238 := thrift.NewTSimpleJSONProtocolFactory()
 		jsProt239 := factory238.GetProtocol(mbTrans236)
-		argvalue1 := notestore.NewNotebook()
+		argvalue1 := types.NewNotebook()
 		err240 := argvalue1.Read(jsProt239)
 		if err240 != nil {
 			Usage()
@@ -441,7 +442,7 @@ func main() {
 		}
 		factory245 := thrift.NewTSimpleJSONProtocolFactory()
 		jsProt246 := factory245.GetProtocol(mbTrans243)
-		argvalue1 := notestore.NewNotebook()
+		argvalue1 := types.NewNotebook()
 		err247 := argvalue1.Read(jsProt246)
 		if err247 != nil {
 			Usage()
@@ -459,7 +460,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.ExpungeNotebook(value0, value1))
 		fmt.Print("\n")
 		break
@@ -481,7 +482,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.ListTagsByNotebook(value0, value1))
 		fmt.Print("\n")
 		break
@@ -493,7 +494,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.GetTag(value0, value1))
 		fmt.Print("\n")
 		break
@@ -514,7 +515,7 @@ func main() {
 		}
 		factory259 := thrift.NewTSimpleJSONProtocolFactory()
 		jsProt260 := factory259.GetProtocol(mbTrans257)
-		argvalue1 := notestore.NewTag()
+		argvalue1 := types.NewTag()
 		err261 := argvalue1.Read(jsProt260)
 		if err261 != nil {
 			Usage()
@@ -541,7 +542,7 @@ func main() {
 		}
 		factory266 := thrift.NewTSimpleJSONProtocolFactory()
 		jsProt267 := factory266.GetProtocol(mbTrans264)
-		argvalue1 := notestore.NewTag()
+		argvalue1 := types.NewTag()
 		err268 := argvalue1.Read(jsProt267)
 		if err268 != nil {
 			Usage()
@@ -559,7 +560,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.UntagAll(value0, value1))
 		fmt.Print("\n")
 		break
@@ -571,7 +572,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.ExpungeTag(value0, value1))
 		fmt.Print("\n")
 		break
@@ -593,7 +594,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.GetSearch(value0, value1))
 		fmt.Print("\n")
 		break
@@ -614,7 +615,7 @@ func main() {
 		}
 		factory280 := thrift.NewTSimpleJSONProtocolFactory()
 		jsProt281 := factory280.GetProtocol(mbTrans278)
-		argvalue1 := notestore.NewSavedSearch()
+		argvalue1 := types.NewSavedSearch()
 		err282 := argvalue1.Read(jsProt281)
 		if err282 != nil {
 			Usage()
@@ -641,7 +642,7 @@ func main() {
 		}
 		factory287 := thrift.NewTSimpleJSONProtocolFactory()
 		jsProt288 := factory287.GetProtocol(mbTrans285)
-		argvalue1 := notestore.NewSavedSearch()
+		argvalue1 := types.NewSavedSearch()
 		err289 := argvalue1.Read(jsProt288)
 		if err289 != nil {
 			Usage()
@@ -659,7 +660,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.ExpungeSearch(value0, value1))
 		fmt.Print("\n")
 		break
@@ -729,7 +730,7 @@ func main() {
 		}
 		value1 := argvalue1
 		argvalue2 := flag.Arg(3)
-		value2 := notestore.GUID(argvalue2)
+		value2 := types.GUID(argvalue2)
 		fmt.Print(client.FindNoteOffset(value0, value1, value2))
 		fmt.Print("\n")
 		break
@@ -828,7 +829,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		argvalue2 := flag.Arg(3) == "true"
 		value2 := argvalue2
 		argvalue3 := flag.Arg(4) == "true"
@@ -848,7 +849,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.GetNoteApplicationData(value0, value1))
 		fmt.Print("\n")
 		break
@@ -860,7 +861,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		argvalue2 := flag.Arg(3)
 		value2 := argvalue2
 		fmt.Print(client.GetNoteApplicationDataEntry(value0, value1, value2))
@@ -874,7 +875,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		argvalue2 := flag.Arg(3)
 		value2 := argvalue2
 		argvalue3 := flag.Arg(4)
@@ -890,7 +891,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		argvalue2 := flag.Arg(3)
 		value2 := argvalue2
 		fmt.Print(client.UnsetNoteApplicationDataEntry(value0, value1, value2))
@@ -904,7 +905,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.GetNoteContent(value0, value1))
 		fmt.Print("\n")
 		break
@@ -916,7 +917,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		argvalue2 := flag.Arg(3) == "true"
 		value2 := argvalue2
 		argvalue3 := flag.Arg(4) == "true"
@@ -932,7 +933,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.GetResourceSearchText(value0, value1))
 		fmt.Print("\n")
 		break
@@ -944,7 +945,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.GetNoteTagNames(value0, value1))
 		fmt.Print("\n")
 		break
@@ -965,7 +966,7 @@ func main() {
 		}
 		factory364 := thrift.NewTSimpleJSONProtocolFactory()
 		jsProt365 := factory364.GetProtocol(mbTrans362)
-		argvalue1 := notestore.NewNote()
+		argvalue1 := types.NewNote()
 		err366 := argvalue1.Read(jsProt365)
 		if err366 != nil {
 			Usage()
@@ -992,7 +993,7 @@ func main() {
 		}
 		factory371 := thrift.NewTSimpleJSONProtocolFactory()
 		jsProt372 := factory371.GetProtocol(mbTrans369)
-		argvalue1 := notestore.NewNote()
+		argvalue1 := types.NewNote()
 		err373 := argvalue1.Read(jsProt372)
 		if err373 != nil {
 			Usage()
@@ -1010,7 +1011,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.DeleteNote(value0, value1))
 		fmt.Print("\n")
 		break
@@ -1022,7 +1023,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.ExpungeNote(value0, value1))
 		fmt.Print("\n")
 		break
@@ -1072,9 +1073,9 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		argvalue2 := flag.Arg(3)
-		value2 := notestore.GUID(argvalue2)
+		value2 := types.GUID(argvalue2)
 		fmt.Print(client.CopyNote(value0, value1, value2))
 		fmt.Print("\n")
 		break
@@ -1086,7 +1087,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.ListNoteVersions(value0, value1))
 		fmt.Print("\n")
 		break
@@ -1098,7 +1099,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		tmp2, err393 := (strconv.Atoi(flag.Arg(3)))
 		if err393 != nil {
 			Usage()
@@ -1123,7 +1124,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		argvalue2 := flag.Arg(3) == "true"
 		value2 := argvalue2
 		argvalue3 := flag.Arg(4) == "true"
@@ -1143,7 +1144,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.GetResourceApplicationData(value0, value1))
 		fmt.Print("\n")
 		break
@@ -1155,7 +1156,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		argvalue2 := flag.Arg(3)
 		value2 := argvalue2
 		fmt.Print(client.GetResourceApplicationDataEntry(value0, value1, value2))
@@ -1169,7 +1170,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		argvalue2 := flag.Arg(3)
 		value2 := argvalue2
 		argvalue3 := flag.Arg(4)
@@ -1185,7 +1186,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		argvalue2 := flag.Arg(3)
 		value2 := argvalue2
 		fmt.Print(client.UnsetResourceApplicationDataEntry(value0, value1, value2))
@@ -1208,7 +1209,7 @@ func main() {
 		}
 		factory419 := thrift.NewTSimpleJSONProtocolFactory()
 		jsProt420 := factory419.GetProtocol(mbTrans417)
-		argvalue1 := notestore.NewResource()
+		argvalue1 := types.NewResource()
 		err421 := argvalue1.Read(jsProt420)
 		if err421 != nil {
 			Usage()
@@ -1226,7 +1227,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.GetResourceData(value0, value1))
 		fmt.Print("\n")
 		break
@@ -1238,7 +1239,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		argvalue2 := []byte(flag.Arg(3))
 		value2 := argvalue2
 		argvalue3 := flag.Arg(4) == "true"
@@ -1258,7 +1259,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.GetResourceRecognition(value0, value1))
 		fmt.Print("\n")
 		break
@@ -1270,7 +1271,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.GetResourceAlternateData(value0, value1))
 		fmt.Print("\n")
 		break
@@ -1282,7 +1283,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.GetResourceAttributes(value0, value1))
 		fmt.Print("\n")
 		break
@@ -1297,7 +1298,7 @@ func main() {
 			return
 		}
 		argvalue0 := int32(tmp0)
-		value0 := notestore.UserID(argvalue0)
+		value0 := types.UserID(argvalue0)
 		argvalue1 := flag.Arg(2)
 		value1 := argvalue1
 		fmt.Print(client.GetPublicNotebook(value0, value1))
@@ -1320,7 +1321,7 @@ func main() {
 		}
 		factory442 := thrift.NewTSimpleJSONProtocolFactory()
 		jsProt443 := factory442.GetProtocol(mbTrans440)
-		argvalue1 := notestore.NewSharedNotebook()
+		argvalue1 := types.NewSharedNotebook()
 		err444 := argvalue1.Read(jsProt443)
 		if err444 != nil {
 			Usage()
@@ -1347,7 +1348,7 @@ func main() {
 		}
 		factory449 := thrift.NewTSimpleJSONProtocolFactory()
 		jsProt450 := factory449.GetProtocol(mbTrans447)
-		argvalue1 := notestore.NewSharedNotebook()
+		argvalue1 := types.NewSharedNotebook()
 		err451 := argvalue1.Read(jsProt450)
 		if err451 != nil {
 			Usage()
@@ -1380,7 +1381,7 @@ func main() {
 		}
 		factory457 := thrift.NewTSimpleJSONProtocolFactory()
 		jsProt458 := factory457.GetProtocol(mbTrans455)
-		argvalue2 := notestore.NewSharedNotebookRecipientSettings()
+		argvalue2 := types.NewSharedNotebookRecipientSettings()
 		err459 := argvalue2.Read(jsProt458)
 		if err459 != nil {
 			Usage()
@@ -1398,7 +1399,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		argvalue2 := flag.Arg(3)
 		value2 := argvalue2
 		arg463 := flag.Arg(4)
@@ -1477,7 +1478,7 @@ func main() {
 		}
 		factory481 := thrift.NewTSimpleJSONProtocolFactory()
 		jsProt482 := factory481.GetProtocol(mbTrans479)
-		argvalue1 := notestore.NewLinkedNotebook()
+		argvalue1 := types.NewLinkedNotebook()
 		err483 := argvalue1.Read(jsProt482)
 		if err483 != nil {
 			Usage()
@@ -1504,7 +1505,7 @@ func main() {
 		}
 		factory488 := thrift.NewTSimpleJSONProtocolFactory()
 		jsProt489 := factory488.GetProtocol(mbTrans486)
-		argvalue1 := notestore.NewLinkedNotebook()
+		argvalue1 := types.NewLinkedNotebook()
 		err490 := argvalue1.Read(jsProt489)
 		if err490 != nil {
 			Usage()
@@ -1532,7 +1533,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.ExpungeLinkedNotebook(value0, value1))
 		fmt.Print("\n")
 		break
@@ -1593,7 +1594,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.ShareNote(value0, value1))
 		fmt.Print("\n")
 		break
@@ -1605,7 +1606,7 @@ func main() {
 		argvalue0 := flag.Arg(1)
 		value0 := argvalue0
 		argvalue1 := flag.Arg(2)
-		value1 := notestore.GUID(argvalue1)
+		value1 := types.GUID(argvalue1)
 		fmt.Print(client.StopSharingNote(value0, value1))
 		fmt.Print("\n")
 		break

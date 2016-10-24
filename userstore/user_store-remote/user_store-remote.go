@@ -15,7 +15,7 @@ import (
 
 	"git.apache.org/thrift.git/lib/go/thrift"
 
-	"github.com/rastech/goevernote/userstore"
+	"github.com/diffeo/goevernote/userstore"
 )
 
 func Usage() {

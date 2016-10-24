@@ -15,8 +15,8 @@ import (
 
 	"git.apache.org/thrift.git/lib/go/thrift"
 
-	"github.com/rastech/goevernote/notestore"
-	"github.com/rastech/goevernote/types"
+	"github.com/diffeo/goevernote/notestore"
+	"github.com/diffeo/goevernote/types"
 )
 
 func Usage() {

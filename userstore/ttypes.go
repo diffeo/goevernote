@@ -7,8 +7,9 @@ import (
 	"bytes"
 	"fmt"
 	"git.apache.org/thrift.git/lib/go/thrift"
-	"github.com/rastech/goevernote/errors"
-	"github.com/rastech/goevernote/types"
+
+	"github.com/diffeo/goevernote/errors"
+	"github.com/diffeo/goevernote/types"
 )
 
 // (needed to ensure safety because of naive import list construction.)

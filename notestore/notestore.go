@@ -9,10 +9,10 @@ import (
 
 	"git.apache.org/thrift.git/lib/go/thrift"
 
-	"github.com/rastech/goevernote/errors"
-	"github.com/rastech/goevernote/types"
-	"github.com/rastech/goevernote/userstore"
-	"github.com/rastech/goevernote/limits"
+	"github.com/diffeo/goevernote/errors"
+	"github.com/diffeo/goevernote/types"
+	"github.com/diffeo/goevernote/userstore"
+	"github.com/diffeo/goevernote/limits"
 )
 
 // (needed to ensure safety because of naive import list construction.)

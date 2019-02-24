@@ -12,10 +12,6 @@ jobs:
     steps:
       - checkout
 
-      - restore_cache:
-          keys:
-            - v1-pkg-cache
-
       - run:
           name: Print versions
           command: |
@@ -32,8 +28,3 @@ jobs:
       - run:
           name: Install Go packages
           command: go install -v ./...
-
-      - save_cache: # Store cache in the /go/pkg directory
-          key: v1-pkg-cache
-          paths:
-            - "/go/pkg"

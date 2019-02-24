@@ -1,0 +1,24 @@
+# CircleCI build configuration
+# Based on: https://circleci.com/docs/2.0/language-go/#sample-configuration
+
+version: 2
+jobs:
+  build:
+    docker:
+      # CircleCI Go images available at: https://hub.docker.com/r/circleci/golang/
+      - image: circleci/golang:1.11
+    working_directory: /home/circleci/goevernote
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-pkg-cache
+
+      - run: go install -v ./...
+
+      - save_cache: # Store cache in the /go/pkg directory
+          key: v1-pkg-cache
+          paths:
+            - "/go/pkg"

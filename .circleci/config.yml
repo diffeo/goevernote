@@ -16,7 +16,22 @@ jobs:
           keys:
             - v1-pkg-cache
 
-      - run: go install -v ./...
+      - run:
+          name: Print versions
+          command: |
+            set -x
+            go version
+            go env
+
+      - run:
+          name: Ensure go modules are up to date
+          command: |
+            go mod tidy -v
+            git diff --name-only --exit-code
+
+      - run:
+          name: Install Go packages
+          command: go install -v ./...
 
       - save_cache: # Store cache in the /go/pkg directory
           key: v1-pkg-cache
